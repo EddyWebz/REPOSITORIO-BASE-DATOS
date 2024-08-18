@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones y Reportes de Vehículos</title>
+    <!-- Vinculación al archivo CSS de notificaciones -->
+    <link rel="stylesheet" href="/notif.css">
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Notificaciones y Reportes de Vehículos en Garaje</h1>
+    </header>
+
+    <!-- Sección de Notificaciones Activas -->
+    <section id="notificaciones">
+        <h2>Vehículos Actuales en el Garaje</h2>
+        <h3>Garaje P1</h3>
+        <div id="notificaciones-contenedor-P1">
+            <!-- Las notificaciones dinámicas de P1 se insertarán aquí -->
+        </div>
+        <h3>Garaje P2</h3>
+        <div id="notificaciones-contenedor-P2">
+            <!-- Las notificaciones dinámicas de P2 se insertarán aquí -->
+        </div>
+    </section>
+
+    <!-- Sección de Reportes -->
+    <section id="reportes">
+        <h2>Generar Reporte de Vehículos</h2>
+        <form id="form-reporte">
+            <label for="fecha-inicio">Fecha de Inicio:</label>
+            <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+
+            <label for="fecha-fin">Fecha de Fin:</label>
+            <input type="date" id="fecha-fin" name="fecha-fin" required>
+
+            <button type="submit">Generar Reporte</button>
+            <!-- Botón de Imprimir -->
+    <button type="button" id="btn-imprimir">Imprimir/Descargar PDF</button>
+        </form>
+
+        <h3>Garaje P1</h3>
+        <table id="tabla-reporte-P1">
+            <thead>
+                <tr>
+                    <th>Habitación</th>
+                    <th>Placa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de datos se insertarán dinámicamente aquí -->
+            </tbody>
+        </table>
+
+        <h3>Garaje P2</h3>
+        <table id="tabla-reporte-P2">
+            <thead>
+                <tr>
+                    <th>Habitación</th>
+                    <th>Placa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de datos se insertarán dinámicamente aquí -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Vinculación al archivo JavaScript de notificaciones y reportes -->
+    <script src="/report.js"></script>
+</body>
+</html>

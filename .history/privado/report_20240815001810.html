@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones y Reportes de Vehículos</title>
+    <!-- Vinculación al archivo CSS de notificaciones -->
+    <link rel="stylesheet" href="/notif.css">
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Notificaciones de Vehículos en Garaje</h1>
+    </header>
+
+    <!-- Sección de Notificaciones Activas -->
+    <section id="notificaciones">
+        <h2>Vehículos Actuales en el Garaje</h2>
+        <div id="notificaciones-contenedor">
+            <!-- Las notificaciones dinámicas se insertarán aquí -->
+        </div>
+    </section>
+
+    <!-- Sección de Reportes -->
+    <section id="reportes">
+        <h2>Generar Reporte de Vehículos</h2>
+        <form id="form-reporte">
+            <label for="fecha-inicio">Fecha de Inicio:</label>
+            <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+
+            <label for="fecha-fin">Fecha de Fin:</label>
+            <input type="date" id="fecha-fin" name="fecha-fin" required>
+
+            <button type="submit">Generar Reporte</button>
+        </form>
+
+        <!-- Tabla para mostrar los resultados del reporte -->
+        <table id="tabla-reporte">
+            <thead>
+                <tr>
+                    <th>Fecha de Ingreso</th>
+                    <th>Garaje</th>
+                    <th>Habitación</th>
+                    <th>Placa</th>
+                    <th>Hora de Ingreso</th>
+                    <th>Número de Noches</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de datos se insertarán dinámicamente aquí -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Vinculación al archivo JavaScript de notificaciones y reportes -->
+    <script src="/report.js"></script>
+</body>
+</html>

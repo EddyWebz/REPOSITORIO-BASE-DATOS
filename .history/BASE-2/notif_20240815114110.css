@@ -1,0 +1,194 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+header h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Sección de Notificaciones */
+#notificaciones h2, #notificaciones h3 {
+    color: #34495e;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.garaje {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.notificaciones-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    animation: slideInUp 0.5s ease-in-out;
+}
+
+.notificacion {
+    background-color: #ffffff;
+    border-left: 3px solid #2980b9;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: calc(50% - 5px);  /* Ocupa la mitad del ancho disponible */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.notificacion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección de Reportes */
+#reportes h2, #reportes h3 {
+    color: #34495e;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#form-reporte {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 100px;
+}
+
+#form-reporte input, #form-reporte button {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #bdc3c7;
+    font-size: 0.8em;
+}
+
+#form-reporte button {
+    background-color: #2980b9;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#form-reporte button:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Tablas de Reportes */
+.compact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+}
+
+.compact-table th, .compact-table td {
+    border: 1px solid #bdc3c7;
+    padding: 5px;
+    text-align: center;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    transition: background-color 0.3s ease;
+}
+
+.compact-table th {
+    background-color: #2980b9;
+    color: white;
+}
+
+.compact-table tr:nth-child(even) {
+    background-color: #f7f9f9;
+}
+
+.compact-table tr:hover {
+    background-color: #e1ecf4;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos específicos para impresión */
+@media print {
+    body {
+        background-color: white; /* Asegura un fondo blanco para la impresión */
+        color: black; /* Asegura que el texto sea negro */
+    }
+
+    #reportes h2, #reportes h3 {
+        color: black; /* Asegura que los títulos sean visibles */
+    }
+    
+    #reportes table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    #reportes th, #reportes td {
+        border: 1px solid #000; /* Asegura que las líneas de la tabla sean visibles */
+        padding: 5px;
+        text-align: center;
+        background-color: white; /* Fondo blanco para asegurar visibilidad */
+        color: black; /* Texto negro para asegurar visibilidad */
+    }
+    
+    #reportes th {
+        background-color: #ddd; /* Fondo gris para los encabezados de tabla */
+        color: black; /* Asegura que el texto sea visible */
+    }
+
+    #reportes td {
+        color: black; /* Asegura que el texto sea visible */
+    }
+
+    /* Ocultar elementos no necesarios en la impresión */
+    button, #form-reporte {
+        display: none;
+    }
+
+    /* Ocultar la sección de notificaciones en la impresión */
+    #notificaciones {
+        display: none;
+    }
+
+    /* Asegurar que las tablas no se dividan entre páginas */
+    #reportes {
+        page-break-inside: avoid;
+    }
+}

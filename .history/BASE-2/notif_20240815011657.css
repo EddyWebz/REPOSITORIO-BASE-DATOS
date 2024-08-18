@@ -1,0 +1,86 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+header, section {
+    margin-bottom: 30px;
+}
+
+/* Encabezado */
+header h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Sección de Notificaciones */
+#notificaciones h2, #notificaciones h3 {
+    color: #555;
+}
+
+#notificaciones-contenedor-P1, #notificaciones-contenedor-P2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.notificacion {
+    background-color: #fff;
+    border-left: 5px solid #4CAF50;
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+}
+
+/* Sección de Reportes */
+#reportes h2, #reportes h3 {
+    color: #555;
+}
+
+#form-reporte {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#form-reporte label {
+    font-weight: bold;
+}
+
+#form-reporte input {
+    padding: 5px;
+}
+
+#form-reporte button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#form-reporte button:hover {
+    background-color: #45a049;
+}
+
+/* Tablas de Reportes */
+#tabla-reporte-P1, #tabla-reporte-P2 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#tabla-reporte-P1 th, #tabla-reporte-P1 td,
+#tabla-reporte-P2 th, #tabla-reporte-P2 td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#tabla-reporte-P1 th, #tabla-reporte-P2 th {
+    background-color: #4CAF50;
+    color: white;
+}

@@ -1,0 +1,192 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+header h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Sección de Notificaciones */
+#notificaciones h2, #notificaciones h3 {
+    color: #34495e;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#notificaciones-contenedor-P1, #notificaciones-contenedor-P2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: slideInUp 0.8s ease-in-out;
+}
+
+.notificacion {
+    background-color: #ffffff;
+    border-left: 5px solid #2980b9;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: calc(33.333% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.notificacion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de Reportes */
+#reportes h2, #reportes h3 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#form-reporte {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#form-reporte label {
+    font-weight: bold;
+    color: #2c3e50;
+    flex: 1;
+    min-width: 100px;
+}
+
+#form-reporte input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    flex: 2;
+    min-width: 200px;
+}
+
+#form-reporte button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#form-reporte button:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+}
+
+/* Tablas de Reportes */
+#tabla-reporte-P1, #tabla-reporte-P2 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#tabla-reporte-P1 th, #tabla-reporte-P1 td,
+#tabla-reporte-P2 th, #tabla-reporte-P2 td {
+    border: 1px solid #bdc3c7;
+    padding: 15px;
+    text-align: center;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    transition: background-color 0.3s ease;
+}
+
+#tabla-reporte-P1 th, #tabla-reporte-P2 th {
+    background-color: #2980b9;
+    color: white;
+}
+
+#tabla-reporte-P1 tr:nth-child(even), #tabla-reporte-P2 tr:nth-child(even) {
+    background-color: #f7f9f9;
+}
+
+#tabla-reporte-P1 tr:hover, #tabla-reporte-P2 tr:hover {
+    background-color: #e1ecf4;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Estilos para los botones en el formulario */
+#form-reporte button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 10px; /* Espacio entre botones */
+}
+
+#form-reporte button:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+}
+
+@media print {
+    body {
+        background-color: white; /* Asegura un fondo blanco para la impresión */
+        color: black; /* Asegura que el texto sea negro */
+    }
+    
+    #reportes table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    #reportes th, #reportes td {
+        border: 1px solid #000; /* Asegura que las líneas de la tabla sean visibles */
+        padding: 8px;
+        text-align: left;
+    }
+    
+    #reportes th {
+        background-color: #ddd; /* Fondo gris para los encabezados de tabla */
+    }
+
+    /* Asegura que todos los textos sean negros */
+    #reportes td {
+        color: black;
+    }
+
+    /* Opcional: ocultar botones u otros elementos innecesarios en la impresión */
+    button, #form-reporte {
+        display: none;
+    }
+}

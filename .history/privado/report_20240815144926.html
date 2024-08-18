@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones y Reportes de Vehículos</title>
+    <!-- Vinculación al archivo CSS de notificaciones -->
+    <link rel="stylesheet" href="/notif.css">
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Centro de Notificaciones</h1>
+    </header>
+
+    <!-- Sección de Notificaciones Activas -->
+    <section id="notificaciones">
+        <h2>Registro diario</h2>
+        <div class="notificaciones-garajes">
+            <div class="garaje">
+                <h3>Garaje P1</h3>
+                <div id="notificaciones-contenedor-P1" class="notificaciones-contenedor">
+                    <!-- Las notificaciones dinámicas de P1 se insertarán aquí -->
+                </div>
+            </div>
+            <div class="garaje">
+                <h3>Garaje P2</h3>
+                <div id="notificaciones-contenedor-P2" class="notificaciones-contenedor">
+                    <!-- Las notificaciones dinámicas de P2 se insertarán aquí -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Reportes -->
+    <section id="reportes">
+    
+    
+            <!-- Botón de Imprimir -->
+            <button type="button" id="btn-imprimir">Imprimir/Descargar PDF</button>
+        </form>
+
+        <div class="reportes-garajes">
+            <div class="garaje">
+                <h3>Garaje P1</h3>
+                <table id="tabla-reporte-P1" class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>Habitación</th>
+                            <th>Placa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas de datos se insertarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="garaje">
+                <h3>Garaje P2</h3>
+                <table id="tabla-reporte-P2" class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>Habitación</th>
+                            <th>Placa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas de datos se insertarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vinculación al archivo JavaScript de notificaciones y reportes -->
+    <script src="/report.js"></script>
+</body>
+</html>
